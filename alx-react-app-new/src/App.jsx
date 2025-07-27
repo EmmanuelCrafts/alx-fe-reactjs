@@ -7,6 +7,8 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import UserProfile from './components/UserProfile';
+import { Counter
+ } from './components/Counter';
 
 function App() {
   return (
@@ -14,6 +16,7 @@ function App() {
         <WelcomeMessage />
         <Header />
         <MainContent />
+        <Counter />
         <UserProfile name="Alice" age="25" bio="Loves hiking and photography"/>
         <Footer />
       </div>
