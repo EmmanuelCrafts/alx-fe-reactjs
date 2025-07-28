@@ -5,7 +5,7 @@ import WelcomeMessage from './components/WelcomeMessage';
 import './App.css';
 import UserProfile from './components/UserProfile';
 import { Counter} from './components/Counter';
-import { userContext } from './components/UserContext';
+import userContext from './components/UserContext';
 import ProfilePage from './components/ProfilePage';
 import UserDetails from './components/UserDetails';
 
