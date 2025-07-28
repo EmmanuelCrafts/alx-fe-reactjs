@@ -5,7 +5,7 @@ import WelcomeMessage from './components/WelcomeMessage';
 import './App.css';
 import UserProfile from './components/UserProfile';
 import { Counter} from './components/Counter';
-import userContext from './components/UserContext';
+import UserContext from './components/UserContext';
 import ProfilePage from './components/ProfilePage';
 import UserDetails from './components/UserDetails';
 
@@ -16,10 +16,10 @@ function App() {
         <WelcomeMessage />
         <Header />
         <MainContent />
-        <userContext.Provider value={userData}>
+        <UserContext.Provider value={userData}>
              <ProfilePage />
              <UserDetails />
-        </userContext.Provider>
+        </UserContext.Provider>
         <Counter />
         <UserProfile name="Alice" age="25" bio="Loves hiking and photography"/>
         <Footer />
