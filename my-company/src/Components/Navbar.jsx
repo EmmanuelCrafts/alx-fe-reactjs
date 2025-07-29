@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-export default function Navbar(){
+ function Navbar(){
     return (
         <nav style={{
             display:'flex', gap: '2rem', paddingLeft: '2rem'
@@ -11,3 +11,4 @@ export default function Navbar(){
         </nav>
     );
 }
+export default Navbar;
