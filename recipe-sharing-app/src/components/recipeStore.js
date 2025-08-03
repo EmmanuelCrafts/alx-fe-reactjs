@@ -6,7 +6,30 @@ const useRecipeStore = create(set => ({
         { id: 2, title: 'Beef Stew', description: 'Hearty and savory' },
         { id: 3, title: 'Veggie Pasta', description: 'Light and healthy' },
     ],
+    
+    favorites: [],
+    addFavorite: (id) => {
+        const { favorites } = get();
+        if (!favorites.includes(id)) {
+          set({ favorites: [...favorites, id] });
+        }
+      },
+      removeFavorite: (id) => {
+        set(state => ({
+          favorites: state.favorites.filter(favId => favId !== id),
+        }));
+      },
 
+    recommendations: [],
+    generateRecommendations: () => {
+        const { favorites, recipes } = get();
+        const recommended = recipes.filter(
+          recipe =>
+            favorites.includes(recipe.id) && Math.random() > 0.5
+        );
+        set({ recommendations: recommended });
+      },
+    
     searchTerm:'',
     setSearchTerm: (term) =>set({searchTerm: term}),
     

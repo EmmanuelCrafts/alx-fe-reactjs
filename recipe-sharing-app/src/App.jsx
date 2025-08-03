@@ -4,6 +4,8 @@ import AddRecipeForm from './components/AddRecipeForm'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import RecipeDetails from './components/RecipeDetails'
 import SearchBar from './components/SearchBar'
+import FavoritesList from './components/FavoritesList'
+import RecommendationsList from './components/RecommendationsList'
 
 function App() {
 
@@ -14,6 +16,8 @@ function App() {
            <>
              <SearchBar />
              <RecipeList />
+             <FavoritesList />
+             <RecommendationsList />
            </>
         } />
        <Route path='/add' element={<AddRecipeForm />} />
