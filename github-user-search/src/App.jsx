@@ -1,6 +1,4 @@
 import SearchUser from './components/Search'
-import './App.css'
-
 function App() {
   return (
     <>
