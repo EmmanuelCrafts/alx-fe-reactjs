@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { fetchUserData } from "../services/githubService";
-import SkeletonCard from "./SkeletonCard";
 
 const SearchUser = () => {
   const [username, setUsername] = useState('');
@@ -89,7 +88,7 @@ const SearchUser = () => {
           </button>
         </form>
 
-        {loading && <SkeletonCard />}
+        {loading && <p className="mt-6 text-center text-red-400 font-medium">Fetching your data...</p>}
 
         {error && <p className="mt-6 text-center text-red-400 font-medium">{error}</p>}
 
