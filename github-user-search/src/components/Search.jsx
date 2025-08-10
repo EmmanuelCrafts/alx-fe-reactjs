@@ -49,7 +49,12 @@ const SearchUser = () => {
 
   return (
     <div className="min-h-screen bg-slate-900 flex flex-col items-center py-10 px-4 text-gray-200">
-      <div className="bg-gray-800 shadow-2xl rounded-2xl p-12 w-full max-w-7xl mx-auto">
+      {/*
+        Increased padding from `p-12` to `p-16` on the main container
+        to provide more space on the left and right sides, in addition
+        to the existing `gap-10` between the columns.
+      */}
+      <div className="bg-gray-800 shadow-2xl rounded-2xl p-16 w-full max-w-7xl mx-auto">
         <form onSubmit={handleSubmit} className="flex flex-col items-center gap-5 mb-12">
           <h2 className="text-3xl font-bold text-center text-white">
             Search GitHub Users
@@ -94,16 +99,24 @@ const SearchUser = () => {
 
         {userData?.length > 0 && (
           <>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 items-stretch">
+            {/*
+              The `gap-10` class provides a larger, more distinct gap
+              between the user cards. The outer container already has
+              `max-w-7xl mx-auto` for left/right margins.
+            */}
+            <div className="grid grid-cols-2 gap-10 mt-8 mb-8 items-stretch">
               {userData.map((user) => (
                 <div
                   key={user.id}
-                  className="bg-gray-900 border border-gray-700 rounded-xl p-4 text-left shadow-lg hover:shadow-2xl  transition-all duration-300 w-full flex flex-col justify-between"
+                  className="bg-gray-900 border border-gray-700 rounded-xl p-4 mb-4 text-left shadow-lg hover:shadow-2xl  transition-all duration-300 w-full flex flex-col justify-between"
                 >
                   <div>
                     <img
-                      src={user.avatar_url}
+                      src={`${user.avatar_url}&s=96`}
                       alt={user.login}
+                      width={96}
+                      height={96}
+                      loading="lazy"
                       className="w-24 h-24 rounded-full border-2 border-blue-500 mb-3"
                     />
                     <h3 className="font-semibold text-lg text-white mb-1">{user.login}</h3>
