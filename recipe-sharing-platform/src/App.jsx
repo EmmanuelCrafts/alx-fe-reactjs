@@ -1,12 +1,9 @@
-import './App.css'
-
+import RecipeFinder from './components/HomePage'
 function App() {
 
   return (
     <>
-     <div>
-      <p className='text-blue-500'>i love tennis</p>
-      </div>
+    <RecipeFinder />
     </>
   )
 }
