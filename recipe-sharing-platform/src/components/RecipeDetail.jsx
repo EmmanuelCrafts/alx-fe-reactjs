@@ -2,7 +2,7 @@ import { useEffect , useState} from "react"
 import recipes from "../data.json"
 import { useParams } from "react-router-dom"
 
- function RecipeDetails() {
+ function RecipeDetail() {
     const[recipe, setRecipes] = useState(null);
     const{ id } = useParams();
     const ingredients = recipe?.ingredients || [];
@@ -42,4 +42,4 @@ import { useParams } from "react-router-dom"
     </>
   );
 }
-export default RecipeDetails;
+export default RecipeDetail;

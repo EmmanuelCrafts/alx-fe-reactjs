@@ -1,5 +1,5 @@
 import RecipeFinder from './components/HomePage'
-import RecipeDetails from './components/RecipeDetails'
+import RecipeDetail from './components/RecipeDetail'
 import {  BrowserRouter, Route, Routes } from 'react-router-dom'
 function App() {
 
@@ -8,7 +8,7 @@ function App() {
     <BrowserRouter>
          <Routes>
              <Route path='/' element={<RecipeFinder />} />
-             <Route path='/recipes/:id' element={<RecipeDetails />} />
+             <Route path='/recipes/:id' element={<RecipeDetail />} />
          </Routes>
     </BrowserRouter>
     </>
