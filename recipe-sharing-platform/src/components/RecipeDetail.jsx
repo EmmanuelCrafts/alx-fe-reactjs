@@ -19,7 +19,7 @@ import { useParams } from "react-router-dom"
             <h1 className="font-extrabold text-2xl mb-4 pt-4 text-center text-orange-500 hover:text-orange-600
               transition duration-100  lg:text-4xl lg:pt-8">{recipe?.title}</h1>
          <div className="mb-8">
-            <img src={recipe?.image} className="w-[70%] md:w-[50%] ml-10 rounded-2xl" alt={recipe?.title} />
+            <img src={recipe?.image} className="w-[70%] shadow-4xl md:w-[50%] ml-10 rounded-2xl" alt={recipe?.title} />
             <div className="mt-8 pt-4">
                <h2 className="font-semibold text-orange-500 md:text-xl
                 text-lg ml-4 md:pl-8  lg:text-2xl">Ingredients</h2>
