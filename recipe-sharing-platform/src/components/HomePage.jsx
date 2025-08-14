@@ -1,8 +1,9 @@
  import { useState, useEffect} from "react";
 import data from "../data.json"
+import { useNavigate } from "react-router-dom";
 function RecipeFinder(){
     const[recipes, setRecipes] = useState([]);
-
+    const navigate = useNavigate();
     useEffect(() => {
       setRecipes(data);
     }, []);
@@ -18,7 +19,8 @@ function RecipeFinder(){
           <div>
           <h2 className="font-medium text-orange-400  text-lg">{recipe.title}</h2>
           <p className="text-left lg:w-[70%] lg:h-auto">{recipe.summary}</p>
-          <button type="submit" className="bg-orange-600 w-[32%] md:w-[21%]  rounded-2xl py-1 mt-2 hover:bg-orange-400 transition duration-500 ease-in-out text-white">Details</button>
+          <button type="submit" onClick={() => navigate(`/recipes/${recipe.id}`)} className="bg-orange-600 w-[40%] md:w-[30%] lg:w-[25%] rounded-2xl py-1 mt-4 hover:bg-orange-400
+           transition duration-500 ease-in-out text-white">View details</button>
           </div>
              <img 
              src={recipe.image} 

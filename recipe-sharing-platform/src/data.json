@@ -1,14 +1,59 @@
 [
-    {
-      "id": 1,
-      "title": "Spaghetti Carbonara",
-      "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
-      "image": "https://www.allrecipes.com/thmb/zJzTLhtUWknHXVoFIzysljJ9wR8=/0x512/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/11973-spaghetti-carbonara-ii-DDMFS-4x3-6edea51e421e4457ac0c3269f3be5157.jpg"
-    },
-    {
-      "id": 2,
-      "title": "Chicken Tikka Masala",
-      "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy.",
-      "image": "https://www.allrecipes.com/thmb/HAZ2a9tKZwpqLv5cXPSHJBEmmNo=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/9023-baked-teriyaki-chicken-DDMFS-4x3-8fc9cd3743714eedad57edb8bda8e59b.jpg"
-    }
-  ]
+  {
+    "id": 1,
+    "title": "Spaghetti Carbonara",
+    "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
+    "image": "https://www.allrecipes.com/thmb/zJzTLhtUWknHXVoFIzysljJ9wR8=/0x512/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/11973-spaghetti-carbonara-ii-DDMFS-4x3-6edea51e421e4457ac0c3269f3be5157.jpg",
+    "ingredients": [
+      "200g spaghetti",
+      "100g pancetta or bacon, diced",
+      "2 large eggs",
+      "50g Pecorino Romano cheese, grated",
+      "50g Parmesan cheese, grated",
+      "Freshly ground black pepper",
+      "Salt, to taste"
+    ],
+    "instructions": [
+      "Bring a large pot of salted water to a boil and cook spaghetti until al dente.",
+      "In a separate pan, cook pancetta over medium heat until crispy. Set aside.",
+      "In a bowl, whisk eggs, Pecorino, Parmesan, and a good amount of black pepper.",
+      "Drain spaghetti, reserving a little pasta water.",
+      "Add spaghetti to the pancetta pan, remove from heat, and quickly mix in the egg-cheese mixture.",
+      "Add reserved pasta water if needed to loosen the sauce.",
+      "Serve immediately with extra cheese and pepper."
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Chicken Tikka Masala",
+    "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy.",
+    "image": "https://www.allrecipes.com/thmb/HAZ2a9tKZwpqLv5cXPSHJBEmmNo=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/9023-baked-teriyaki-chicken-DDMFS-4x3-8fc9cd3743714eedad57edb8bda8e59b.jpg",
+    "ingredients": [
+      "500g boneless chicken, cut into cubes",
+      "150g plain yogurt",
+      "2 tbsp lemon juice",
+      "2 tsp ground cumin",
+      "2 tsp paprika",
+      "1 tsp ground turmeric",
+      "1 tsp garam masala",
+      "3 tbsp butter",
+      "1 large onion, finely chopped",
+      "3 cloves garlic, minced",
+      "1 tbsp grated ginger",
+      "400g canned crushed tomatoes",
+      "200ml heavy cream",
+      "Fresh coriander leaves, for garnish",
+      "Salt and pepper, to taste"
+    ],
+    "instructions": [
+      "Marinate chicken in yogurt, lemon juice, cumin, paprika, turmeric, garam masala, salt, and pepper for at least 1 hour.",
+      "Grill or pan-fry chicken pieces until cooked through, then set aside.",
+      "In a large pan, melt butter and sauté onions until golden brown.",
+      "Add garlic and ginger; cook for 1 minute.",
+      "Stir in crushed tomatoes and cook for 10 minutes.",
+      "Pour in cream, mix well, and simmer for 5 minutes.",
+      "Add grilled chicken and cook for another 5–10 minutes, allowing flavors to blend.",
+      "Garnish with fresh coriander and serve with rice or naan bread."
+    ]
+  }
+]
