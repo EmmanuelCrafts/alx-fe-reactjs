@@ -17,7 +17,6 @@ function RecipeFinder(){
             <h1 className="font-extrabold text-2xl mb-2 text-center text-orange-500 hover:text-orange-600
               transition duration-100 ">
               My Recipes</h1>
-              
           {recipes.map(recipe => (
            <div key={recipe.id} className="mb-8  pt-4 pb-5 px-2 flex flex-row-reverse  gap-4 bg-gray-100 hover:scale-105 
             transition duration-300 ease-in-out shadow-lg   md:w-[80%] md:mx-auto lg:w-[40%] ">
