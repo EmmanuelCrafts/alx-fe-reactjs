@@ -7,55 +7,64 @@ export default function AddRecipeForm() {
 
     const  handleSubmit = (event) => {
         event.preventDefault();
-        setTitle("");
-        setIngredients([]);
-        setInstructions([]);
 
         if (!title.trim()){
             alert("Title is required");
             return;
         }
 
-        if (!ingredients.length === 0) {
+        if (ingredients.length === 0) {
             alert('Please add ingredients');
             return;
         }
 
-        if (!instructions.length === 0) {
+        if (instructions.length === 0) {
             alert('Please add at least one instruction');
             return;
         }
+
+        setTitle("");
+        setIngredients([]);
+        setInstructions([]);
     };
 
     return (
         <>
            <div>
-             <form onSubmit={handleSubmit}>
+             <form className="flex flex-col gap-4 ml-4 bg-gray-100 rounded-xl border-1 border-amber-100 w-[95%] pl-4 py-8" onSubmit={handleSubmit}>
+               <div className=" flex gap-4 ">
+                 <label htmlFor="title">Title:</label>
                  <input 
                  type="text"
                  value={title}
                  onChange={(e) => setTitle(e.target.value)}
+                 className="bg-white w-[80%] h-12"
                   />
-                
-                <label htmlFor="ingredients">
-                      Ingredients:
-                       <textarea 
-                         value={ingredients}
-                         onChange={(e) => setIngredients(e.target.value.split("\n").map(ingredient => ingredient.filter(Boolean)))}
+               </div>
+                <div className="flex  gap-4 mt-4">
+                    <label htmlFor="ingredients"> Ingredients: </label>
+                    <textarea 
+                         value={ingredients.join("\n")}
+                         onChange={(e) => setIngredients(e.target.value
+                          .split("\n")
+                          .map(ingredient => ingredient.trim())
+                          .filter(Boolean)
+                        )}
                         placeholder="Enter ingredients"
+                        className="bg-white  w-[70%] h-32"
                        />
-                </label>
-
-                <label htmlFor="ingredients">
-                      Instructions:
-                       <textarea 
-                         value={instructions}
+                </div>
+                <div className="flex gap-4 mt-4 ">
+                    <label htmlFor="ingredients">Instructions: </label> 
+                    <textarea 
+                         value={instructions.join('\n')}
                          onChange={(e) => setInstructions(e.target.value.split('\n').map(instruction => instruction.filter(Boolean)))}
                         placeholder="Enter at least 2 instructions"
+                        className="bg-white w-[70%] h-32"
                        />
-                </label>
+                </div>
 
-                <button type="submit" className="bg-orange-600 w-[40%] md:w-[30%] lg:w-[25%] rounded-2xl py-1 mt-4 hover:bg-orange-400
+                <button type="submit" className="bg-orange-600 w-[25%] mx-auto md:w-[30%] lg:w-[25%] rounded-2xl py-1 mt-4 hover:bg-orange-400
            transition duration-500 ease-in-out text-white">Submit</button>
              </form>
              <div>
