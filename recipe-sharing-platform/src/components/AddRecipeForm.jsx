@@ -4,30 +4,32 @@ export default function AddRecipeForm() {
     const[title, setTitle] = useState("");
     const[ingredients, setIngredients] = useState([]);
     const[steps, setSteps] = useState([]);
-    
+    const[errors, setErrors] = useState({});
     const[submittedData, setSubmittedData] = useState(null);
+    
+
+    const validate = () => {
+      const newErrors = {};
+      if(!title.trim()) newErrors.title = "Title is required";
+      if(ingredients.length === 0) newErrors.ingredients = "Please add at least one ingredient";
+      if(steps.length === 0)  newErrors.steps = "Please add at least one instruction";
+      return newErrors;
+    };
     const  handleSubmit = (event) => {
         event.preventDefault();
 
-        if (!title.trim()){
-            alert("Title is required");
-            return;
-        }
-
-        if (ingredients.length === 0) {
-            alert('Please add ingredients');
-            return;
-        }
-
-        if (steps.length === 0) {
-            alert('Please add at least one instruction');
-            return;
+        const validateErrors = validate();
+        if (Object.keys(validateErrors).length > 0){
+          setErrors(validateErrors);
+          return;
         }
          setSubmittedData({
           title,
           ingredients,
           steps,
          })
+
+         setErrors({});
         setTitle("");
         setIngredients([]);
         setSteps([]);
@@ -47,6 +49,8 @@ export default function AddRecipeForm() {
                  placeholder="Enter Recipe title eg.Carribean fish curry"
                   />
                </div>
+               {errors.title && <p className="text-red-500 text-center text-sm">{errors.title}</p>}
+
                 <div className="flex  gap-4 mt-4 items-center">
                     <label htmlFor="ingredients"> Ingredients: </label>
                     {/* text area not working as needed user cant type space or commas */}
@@ -61,6 +65,8 @@ export default function AddRecipeForm() {
                         className="bg-white  w-[70%] h-auto "
                        />
                 </div>
+                {errors.ingredients && <p className="text-red-500 text-center text-sm">{errors.ingredients}</p>}
+
                 <div className="flex gap-4 mt-4 items-center">
                     <label htmlFor="instructions">Instructions: </label> 
                     <textarea 
@@ -74,6 +80,7 @@ export default function AddRecipeForm() {
                         className="bg-white w-[70%] h-auto"
                        />
                 </div>
+                {errors.steps && <p className="text-red-500 text-center text-sm">{errors.steps}</p>}
 
                 <button type="submit" className="bg-orange-600 w-[25%] mx-auto md:w-[30%] lg:w-[25%] rounded-2xl py-1 mt-4 hover:bg-orange-400
            transition duration-500 ease-in-out text-white">Submit</button>
