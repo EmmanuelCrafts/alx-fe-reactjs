@@ -36,7 +36,8 @@ function RecipeFinder(){
        ))}
        </div>
           <div>
-            <h2>Add Recipe</h2>
+            <h2 className="font-semibold text-orange-500 md:text-xl
+                text-lg ml-4 md:pl-8  mb-4 lg:text-2xl text-center">Add Recipe</h2>
             <AddRecipeForm />
           </div>
       </>
