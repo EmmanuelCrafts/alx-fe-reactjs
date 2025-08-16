@@ -38,7 +38,7 @@ export default function AddRecipeForm() {
     return (
         <>
            <div>
-             <form className="flex flex-col gap-4 ml-4 bg-gray-100 rounded-xl border-1 border-orange-200 w-[95%] shadow-lg pl-4 py-8 md:w-[80%] md:mx-auto  lg:mb-12 lg:shadow-lg lg:w-[40%] lg:mx-auto" onSubmit={handleSubmit}>
+             <form className="flex flex-col gap-4 ml-4 bg-gray-100 rounded-xl border-1 border-orange-200 w-[95%] shadow-lg pl-4 py-8 md:mb-8 md:w-[80%] md:mx-auto  lg:mb-12 lg:shadow-lg lg:w-[40%] lg:mx-auto" onSubmit={handleSubmit}>
                <div className=" flex gap-4  items-center">
                  <label htmlFor="title">Title:</label>
                  <input 
