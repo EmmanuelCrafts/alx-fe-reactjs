@@ -5,7 +5,7 @@ const RegistrationForm = () => {
         email: "",
         password: "",
     });
-    const[errors, SetErrors] = useState({});
+    const[errors, setErrors] = useState({});
     
      const { username, email, password } = FormData;
 
@@ -22,7 +22,7 @@ const RegistrationForm = () => {
         if (!email) newErrors.email = "Email is required";
         if (!password) newErrors.password = "Password is required";
        
-        SetErrors(newErrors);
+        setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
     }
     const handleSubmit = (e) => {
