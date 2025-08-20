@@ -6,6 +6,8 @@ const RegistrationForm = () => {
         password: "",
     });
     
+     const { username, email, password } = FormData;
+
     const handleChange = (e) => {
         const { name, value} = e.target ;
         SetFormData((prev) => ({
@@ -14,7 +16,6 @@ const RegistrationForm = () => {
     };
     
     const validateForm = () => {
-        const { username, email, password } = FormData;
         if (!username || !email || !password) {
             alert("All fields are required");
             return false;
@@ -41,21 +42,21 @@ const RegistrationForm = () => {
               <input 
               type="text"
               name="username"
-              value={FormData.username}
+              value={username}
               onChange={handleChange}
               placeholder="Enter username"
                />
              <input
               type="email" 
               name="email" 
-              value={FormData.email}
+              value={email}
               placeholder="enter email"
               onChange={handleChange}
                />
                <input
                 type="password" 
                 name="password" 
-                value={FormData.password}
+                value={password}
                 onChange={handleChange}
                 placeholder="enter password"
                  />
