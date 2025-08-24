@@ -7,7 +7,7 @@ const fetchPosts = async () => {
 };
 
 const PostsComponents = () => {
-  const { isLoading, error, isError, data } = useQuery({
+  const { isLoading, error, isError, data,  Refetch} = useQuery({
     queryKey: ["posts"],
     queryFn:  fetchPosts,
     staleTime: 5000, // Data is considered fresh for 5 seconds
@@ -31,6 +31,8 @@ const PostsComponents = () => {
           </li>
         ))}
       </ul>
+        <button onClick={() => Refetch()}>Refetch Posts</button>
     </div>
   );
 }
+export default PostsComponents;
