@@ -1,8 +1,5 @@
-import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Profile from "./components/Profile";
-import ProfileDetails from "./components/ProfileDetails";
-import ProfileSettings from "./components/ProfileSettings";
 
 // Sample data
 const userProfile = { id: 1, name: "Jane Doe", username: "janedoe", email: "jane.doe@example.com" };
@@ -13,11 +10,7 @@ export default function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/profile" element={<Profile user={userProfile} />}>
-          {/* Nested routes */}
-          <Route path="details" element={<ProfileDetails details={profileDetails} />} />
-          <Route path="settings" element={<ProfileSettings settings={profileSettings} />} />
-        </Route>
+        <Route path="/profile" element={<Profile user={userProfile} />} />
       </Routes>
     </Router>
   );
